@@ -9,9 +9,17 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto. */
 
 const parola = 'osso';
+const parolaGirata = giraParola(parola);
 
-for(let i = 0; i < parola.length ; i++){
-  console.log(i);
+console.log(parolaGirata);
+function giraParola(parola){
+  let nuovaParola = '';
+
+  for(let i = parola.length -1; i >= 0 ; i--){
+    nuovaParola += parola[i];
+  }
+
+  return nuovaParola;
 }
 
 
